@@ -1,5 +1,7 @@
-import tensorflow as tf 
+import pandas
 import keras
+import tensorflow.compat.v1 as tf
+tf.disable_v2_behavior()
 
 
 # Model Parameters
@@ -94,11 +96,11 @@ with tf.Session() as sess:
     # Calculate accuracy for MNIST test images
     print("Final Test Accuracy:", sess.run(accuracy, feed_dict={X: x_test, Y: y_test}),"%")
     print()
-    print("Tensorflow:",tf._version_)
+    print("Tensorflow:",tf.__version__)
     
     data = {
-    '이름': ['김병규'],
-    '학번': [12345],
+    '이름': ['정은서서'],
+    '학번': [2310093],
     '학과': ['인공지능공학부']
     }
 
